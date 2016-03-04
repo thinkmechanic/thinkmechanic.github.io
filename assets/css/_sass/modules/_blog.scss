@@ -3,11 +3,11 @@
 .blog-post {
 
   a {
-    color: $highlight-color;
+    color: $highlight-blog;
     text-decoration: none;
 
     &:hover {
-      color: lighten($highlight-color, 10%);
+      color: lighten($highlight-blog, 10%);
     }
 
     &, &:hover {
@@ -22,7 +22,7 @@
     margin-top: 50px;
     h1 {
       font-size: 2.25em;
-      color: $highlight-color;
+      color: $highlight-blog;
       margin-bottom: 10px;
     }
 

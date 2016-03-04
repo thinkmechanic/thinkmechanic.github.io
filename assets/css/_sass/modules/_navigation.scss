@@ -59,13 +59,18 @@
         left: 50%;
         height: 3px;
         margin-top: 3px;
-        background: $highlight-color;
+        background: $highlight-blue;
 
         $transition: width .25s, left .25s;
         -webkit-transition: $transition;
         -moz-transition: $transition;
         -o-transition: $transition;
         transition: $transition;
+
+      }
+
+      &.blog:after {
+        background: $highlight-blog;
       }
 
       &.selected, &:hover {
@@ -98,14 +103,16 @@
     }
 
     .pure-menu-list {
+      float: right;
       display: inline-block;
       margin-left: 15px;
       position: relative;
       top: auto;
 
       .pure-menu-link {
-        margin-right: 20px;
-        padding: .6em 0;
+        margin-left: 20px;
+        margin-right: 0px;
+        padding-top: 1.25em;
       }
     }
   }
