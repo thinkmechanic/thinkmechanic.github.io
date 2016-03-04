@@ -6,7 +6,7 @@ layout: null
   <url>
     <loc>{{ site.url }}</loc>
     <priority>1.0</priority>
-    <changefreq>daily</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
