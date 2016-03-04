@@ -9,24 +9,40 @@
 <title>{{ page_title | escape | strip }}</title>
 <meta content="{{ site.description | escape | strip }}" name="description" />
 
+
+<meta name="twitter:site" content="@{{ site.twitter }}" />
+<meta name="twitter:title" content="{{ page_title | escape | strip }}" />
+
+<meta property="og:title" content="{{ page_title | escape | strip }}" />
+<meta property="og:url" content="{{ page.url }}" />
+
 {% if page.image %}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="{{ page.image }}" />
 {% else %}
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="{{ site.url}}/assets/images/logo.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:image" content="{{ site.url}}/assets/images/logo.png" />
 {% endif %}
 
-<meta name="twitter:site" content="@{{ site.twitter }}" />
-<meta name="twitter:title" content="{{ page_title | escape | strip }}" />
+
+<meta property="og:site_name" content="{{kottke.org}}" />
 
 {% if page.excerpt %}
 <meta name="twitter:description" content="{{ page.excerpt | escape | strip }}" />
+<meta property="og:description" content="{{ page.excerpt | escape | strip }}" />
 {% else %}
 <meta name="twitter:description" content="{{ site.description | escape | strip }}" />
+<meta property="og:description" content="{{ site.description | escape | strip }}" />
 {% endif %}
 
-<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="alternate" type="application/rss+xml"
+  title="{{ site.title }}"
+  href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+<link rel="stylesheet" href="{{ site.asset_host }}/assets/css/main.css">
 
 {% if jekyll.enviornment == "production" %}
 <script>

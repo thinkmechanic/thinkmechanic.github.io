@@ -1,14 +1,60 @@
+@import '../theme/mixins';
+
 #footer {
   margin-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 
-  .pure-g {
+  > .pure-g {
     padding-top: 10px;
     border-top: 3px solid $gray-light;
+
+    .pure-g {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
   }
 
   h4 {
     color: $gray;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  ul.links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #000;
+      font-weight: bold;
+      font-size: 1.15em;
+      text-decoration: none;
+
+      &:hover {
+        color: $highlight-blue;
+      }
+    }
+  }
+
+  .copyright {
+    font-weight: bold;
+    p, a { color: #000; }
+
+    p.contact {
+      margin-bottom: 0px;
+      line-height: 1.5em;
+    }
+
+    p.address { margin-top: 5px; }
+
+    small { color: $gray-light; }
+  }
+
+  @include screen-sm {
+    padding-bottom: 100px;
   }
 }

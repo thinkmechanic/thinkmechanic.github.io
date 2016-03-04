@@ -1,15 +1,27 @@
 # Site settings
+environment: production
+
 title: Think Mechanic
 email: contact@thinkmechanic.com
 twitter: thinkmechanic
 description: We're a small team helping people and companies fully realize projects of any shape and size.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://thinkmechanic.github.io" # the base hostname & protocol for your site
-
+baseurl: ""
+url: "https://thinkmechanic.github.io"
+asset_host: "https://thinkmechanic.github.io"
 permalink: /blog/:year/:title/
+typeform_url: https://thinkmechanic.typeform.com/to/lcRKiL
+
+gems:
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: '/blog/page/:num'
 
 # Build settings
+
 markdown: kramdown
+show_drafts: false
+future: false
 
 # Sass settings
 sass:

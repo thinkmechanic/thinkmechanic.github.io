@@ -1,8 +1,6 @@
-<div class="container" id="footer">
+<footer class="container" id="footer">
   <div class="pure-g">
-    <div class="pure-u-1-1  pure-u-sm-1-3 current-blog blog-post">
-
-
+    <div class="pure-u-1-1 pure-u-md-1-3 current-blog blog-post">
       <h4>New on the blog:</h4>
 
       {% for post in site.posts limit: 1 %}
@@ -17,9 +15,42 @@
       {% endfor %}
     </div>
 
-    <div class="pure-u-1-1 pure-u-sm-1-3">
-      <h4>Links</h4>
+    <div class="pure-u-1-1 pure-u-md-1-3 links">
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <h4>Links</h4>
+          <ul class="links">
+            <li><a href="{{ site.url }}">Our Work</a></li>
+            <li><a href="{{ site.typeform_url }}">Hire Us</a></li>
+            <li><a href="{{ site.url }}/blog/">Blog</a></li>
+            <li><a href="https://twitter.com/thinkmechanic">Twitter</a></li>
+            <li><a href="https://github.com/thinkmechanic">GitHub</a></li>
+          </ul>
+        </div>
+
+        <div class="pure-u-1-2">
+          <h4>Cool Stuff</h4>
+          <ul class="links">
+            <li><a href="http://gorilla.io">Gorilla.io</a></li>
+            <li><a href="http://github.com/thinkmechanic/zero_auth">ZeroAuth</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="pure-u-1-1 pure-u-sm-1-3"></div>
+    <div class="pure-u-1-1 pure-u-md-1-3 copyright">
+      <h4>Think Mechanic</h4>
+
+      <p class="contact">
+        <a href="tel://1-901-277-9247">901.277.9247</a><br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </p>
+
+      <p class="address">
+        1040 West Marietta St.<br>
+        Atlanta, GA, 30342<br>
+      </p>
+
+      <small>&copy;2016 Think Mechanic, LLC.</small>
+    </div>
   </div>
-</div>
+</footer>

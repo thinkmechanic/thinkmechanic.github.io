@@ -2,7 +2,7 @@
 layout: post
 title: "Rails API Tips: Embrace Exceptions"
 author: bschaeffer
-date: 2016/02/15 00:00:00 EST
+date: 2016/03/04 15:22:00 EST
 tags: rails, api, tips, ruby
 excerpt: >
   Today, in our first ever blog post, we look at error and exception handling
