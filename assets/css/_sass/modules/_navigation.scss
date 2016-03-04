@@ -1,0 +1,112 @@
+@import '../theme/mixins';
+
+#navigation {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  a {
+    text-decoration: none;
+  }
+
+  #logo {
+    color: #000;
+    display: inline-block;
+
+    img {
+      $size: 55px;
+      width: $size;
+      height: $size;
+    }
+
+    h1 {
+      display: inline-block;
+      text-transform: none;
+      margin: 0px 0px 0px 5px;
+      color: #000;
+      position: relative;
+      top: -30px;
+    }
+  }
+
+  .pure-menu-list {
+    display: block;
+    margin-left: 66px;
+    position: absolute;
+    top: 50px;
+
+    .pure-menu-item {
+      vertical-align: bottom;
+    }
+
+    .pure-menu-link {
+      padding: 0;
+      margin-right: 20px;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #777;
+
+      &, &:hover {
+        background: none;
+      }
+
+      &:after {
+        clear: both;
+        display: block;
+        content: "";
+        position: relative;
+        width: 0;
+        left: 50%;
+        height: 3px;
+        margin-top: 3px;
+        background: $highlight-color;
+
+        $transition: width .25s, left .25s;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -o-transition: $transition;
+        transition: $transition;
+      }
+
+      &.selected, &:hover {
+        color: #000;
+        &:after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  @include screen-sm {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+
+    #logo {
+      img {
+        $size: 55px;
+        width: $size;
+        height: $size;
+      }
+
+      h1 {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 2em;
+        top: -15px;
+      }
+    }
+
+    .pure-menu-list {
+      display: inline-block;
+      margin-left: 15px;
+      position: relative;
+      top: auto;
+
+      .pure-menu-link {
+        margin-right: 20px;
+        padding: .6em 0;
+      }
+    }
+  }
+}

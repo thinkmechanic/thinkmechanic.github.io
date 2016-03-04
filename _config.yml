@@ -1,0 +1,17 @@
+# Site settings
+title: Think Mechanic
+email: contact@thinkmechanic.com
+twitter: thinkmechanic
+description: We're a small team helping people and companies fully realize projects of any shape and size.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://thinkmechanic.github.io" # the base hostname & protocol for your site
+
+permalink: /blog/:year/:title/
+
+# Build settings
+markdown: kramdown
+
+# Sass settings
+sass:
+  sass_dir: /assets/css/_sass
+  style: compressed

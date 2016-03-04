@@ -1,0 +1,26 @@
+@import './mixins';
+
+.container {
+  /* max-width: $screen-xl; */
+  margin: 0px auto;
+}
+
+.pure-g {
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @include screen-sm {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  &.section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include screen-md {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

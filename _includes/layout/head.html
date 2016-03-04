@@ -1,0 +1,29 @@
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+{% capture page_title %}
+  {% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}
+{% endcapture %}
+
+<title>{{ page_title | escape | strip }}</title>
+<meta content="{{ site.description | escape | strip }}" name="description" />
+
+{% if page.image %}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ page.image }}" />
+{% else %}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="{{ site.url}}/assets/images/logo.png" />
+{% endif %}
+
+<meta name="twitter:site" content="@{{ site.twitter }}" />
+<meta name="twitter:title" content="{{ page_title | escape | strip }}" />
+
+{% if page.excerpt %}
+<meta name="twitter:description" content="{{ page.excerpt | escape | strip }}" />
+{% else %}
+<meta name="twitter:description" content="{{ site.description | escape | strip }}" />
+{% endif %}
+
+<link rel="stylesheet" href="/assets/css/main.css">

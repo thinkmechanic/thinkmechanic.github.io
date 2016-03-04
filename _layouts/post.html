@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    {% include layout/head.html %}
+  </head>
+
+  <body class="blog">
+    {% include layout/header.html %}
+
+     <div class="container blog-post">
+       <section class="pure-g">
+         <div class="pure-u-1-1">
+           <header>
+             <h1 class="title">{{ page.title }}</h1>
+             <small class="date">{{ page.date | date: "%b. %d, %Y" }}</em></small>
+           </header>
+         </div>
+
+         <div class="pure-u-1-1 pure-u-md-7-12">
+           <aside>{{ page.excerpt }}</aside>
+           <article>{{ page.content }}</article>
+         </div>
+       </section>
+     </div>
+
+     {% include layout/footer.html %}
+  </body>
+</html>

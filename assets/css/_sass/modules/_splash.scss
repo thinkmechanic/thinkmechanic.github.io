@@ -1,0 +1,91 @@
+@import '../theme/mixins';
+
+#splash {
+  padding-top: 10px;
+
+  h1 {
+    color: $highlight-color;
+    font-size: 3.70em;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 1.75em;
+    line-height: 1.35em;
+    /* color: $gray-dark; */
+    font-weight: bold;
+  }
+
+  .splash-icons {
+    list-style-type: none;
+    padding-left: 0;
+
+    li.splash-element {
+      padding: .75em 0;
+      border-bottom: 1px solid $gray-light;
+      &:first-of-type { padding-top: 0; }
+      &:last-of-type {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    .splash-icon {
+      svg {
+        $size: 3.5em;
+        width: $size;
+        height: $size;
+        fill: $gray;
+      }
+    }
+  }
+
+  @include screen-md {
+    h1 {
+      /* font-size: 3em; */
+    }
+
+    .right-grid {
+      margin-left: 15%;
+      width: 45%;
+    }
+
+    .splash-icons {
+      margin-top: 45px;
+
+      li.splash-element {
+        padding: 1em 0;
+      }
+
+      .splash-icon {
+        svg {
+          $size: 3.5em;
+          width: $size;
+          height: $size;
+        }
+      }
+    }
+  }
+
+  @include screen-lg {
+    h1 {
+      font-size: 4em;
+    }
+
+    .splash-icons {
+      margin-top: 50px;
+
+      li.splash-element {
+        padding: 1em 0;
+      }
+
+      .splash-icon {
+        svg {
+          $size: 4em;
+          width: $size;
+          height: $size;
+        }
+      }
+    }
+  }
+}
