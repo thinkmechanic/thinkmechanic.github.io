@@ -61,23 +61,31 @@
         margin-top: 3px;
         background: $highlight-blue;
 
-        $transition: width .25s, left .25s;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -o-transition: $transition;
-        transition: $transition;
-
+        @include screen-sm {
+          $transition: width .25s, left .25s;
+          -webkit-transition: $transition;
+          -moz-transition: $transition;
+          -o-transition: $transition;
+          transition: $transition;
+        }
       }
 
-      &.blog:after {
-        background: $highlight-blog;
-      }
-
-      &.selected, &:hover {
+      &.selected {
         color: #000;
         &:after {
           width: 100%;
           left: 0;
+        }
+      }
+
+
+      @include screen-sm {
+        &:hover {
+          color: #000;
+          &:after {
+            width: 100%;
+            left: 0;
+          }
         }
       }
     }
