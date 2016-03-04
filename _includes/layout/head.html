@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="{{ page_title | escape | strip }}" />
 
 <meta property="og:title" content="{{ page_title | escape | strip }}" />
-<meta property="og:url" content="{{ page.url }}" />
+<meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
 
 {% if page.image %}
 <meta name="twitter:card" content="summary_large_image" />
@@ -24,11 +24,11 @@
 <meta name="twitter:image" content="{{ site.url}}/assets/images/logo.png" />
 
 <meta property="og:type" content="website" />
-<meta property="og:image" content="{{ site.url}}/assets/images/logo.png" />
+<meta property="og:image" content="{{ site.url }}/assets/images/logo.png" />
 {% endif %}
 
 
-<meta property="og:site_name" content="{{kottke.org}}" />
+<meta property="og:site_name" content="{{ site.title }}" />
 
 {% if page.excerpt %}
 <meta name="twitter:description" content="{{ page.excerpt | escape | strip }}" />
