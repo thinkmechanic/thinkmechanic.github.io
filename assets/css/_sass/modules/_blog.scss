@@ -108,6 +108,41 @@
 
 #blog-list {
   margin-top: 50px;
+
+  h2 { font-size: 2em; }
+
+  a.author {
+    font-weight: bold;
+    color: #000;
+    border-bottom: 2px solid $highlight-blog;
+
+    &:hover {
+      border-bottom-color: lighten($highlight-blog, 20%);
+    }
+  }
+
+  time {
+    color: #999;
+    font-weight: bold;
+
+    &:before { content: " - "; }
+  }
+
+  .tags {
+    .tag {
+      color: #aaa;
+      background: #eee;
+      border-radius: 12px;
+      padding: 2px 8px;
+      display: inline-block;
+      font-size: .85em;
+    }
+  }
+
+  p.excerpt {
+    line-height: 1.5em;
+    font-size: 1.15em;
+  }
 }
 
 .current-blog {

@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "Rails API Tips: Embrace Exceptions"
-author: bschaeffer
+author: 'bschaeffer'
 date: 2016/03/04 15:22:00 EST
-tags: rails, api, tips, ruby
+tags:
+  - rails
+  - api
+  - ruby
 excerpt: >
   Today, in our first ever blog post, we look at error and exception handling
   inside your Rails API application.
