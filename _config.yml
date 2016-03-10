@@ -6,8 +6,8 @@ email: contact@thinkmechanic.com
 twitter: thinkmechanic
 description: We're a small team helping people and companies fully realize projects of any shape and size.
 baseurl: ""
-url: "https://thinkmechanic.github.io"
-asset_host: "https://thinkmechanic.github.io"
+url: "http://thinkmechanic.com"
+asset_host: "http://thinkmechanic.com"
 permalink: /blog/:year/:title/
 typeform_url: https://thinkmechanic.typeform.com/to/lcRKiL
 
