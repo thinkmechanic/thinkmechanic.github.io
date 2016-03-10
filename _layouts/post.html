@@ -1,30 +1,21 @@
-<!doctype html>
-<html>
-  <head>
-    {% include layout/head.html %}
-  </head>
+---
+layout: default
+---
 
-  <body class="blog">
-    {% include layout/header.html %}
+<div class="container blog-post">
+ <section class="pure-g">
+   <div class="pure-u-1-1">
+     <header>
+       <h1 class="title">{{ page.title }}</h1>
+       <time datetime="{{ page.date | date_to_rfc822 }}" class="date">
+         {{ page.date | date: "%b. %d, %Y" }}
+       </time>
+     </header>
+   </div>
 
-     <div class="container blog-post">
-       <section class="pure-g">
-         <div class="pure-u-1-1">
-           <header>
-             <h1 class="title">{{ page.title }}</h1>
-             <time datetime="{{ page.date | date_to_rfc822 }}" class="date">
-               {{ page.date | date: "%b. %d, %Y" }}
-             </time>
-           </header>
-         </div>
-
-         <div class="pure-u-1-1">
-           <aside>{{ page.excerpt }}</aside>
-           <article>{{ page.content }}</article>
-         </div>
-       </section>
-     </div>
-
-     {% include layout/footer.html %}
-  </body>
-</html>
+   <div class="pure-u-1-1">
+     <aside>{{ page.excerpt }}</aside>
+     <article>{{ page.content }}</article>
+   </div>
+ </section>
+</div>
