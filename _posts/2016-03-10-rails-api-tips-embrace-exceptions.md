@@ -2,7 +2,7 @@
 layout: post
 title: "Rails API Tips: Embrace Exceptions"
 author: 'bschaeffer'
-date: 2016/03/04 15:22:00 EST
+date: 2016/03/10 10:00:00 EST
 tags:
   - rails
   - api
