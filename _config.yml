@@ -13,38 +13,17 @@ typeform_url: https://thinkmechanic.typeform.com/to/lcRKiL
 
 gems:
   - jekyll-paginate
-  - jekyll-assets
-
-# Paginate settings
 
 paginate: 10
 paginate_path: '/blog/page/:num'
-
-# Asset settings
-
-assets:
-  cdn: http://thinkmechanic.com
-  skip_baseurl_with_cdn: false
-  skip_prefix_with_cdn: false
-  prefix: '/assets'
-  cache: false
-  digest: true
-  sources:
-    - _assets/css
-    - _
-    - _assets/images
-  features:
-    liquid: false
-    automatic_img_size: false
-    automatic_img_alt: false
-
-  compress:
-    css: true
-    js: true
-
 
 # Build settings
 
 markdown: kramdown
 show_drafts: false
 future: false
+
+# Sass settings
+sass:
+  sass_dir: /assets/css/_sass
+  style: compressed

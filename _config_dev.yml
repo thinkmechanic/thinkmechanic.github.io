@@ -5,10 +5,3 @@ asset_host: http://localhost:4000
 
 show_drafts: true
 future: true
-
-assets:
-  cdn: http://localhost:4000
-  digest: false
-  compress:
-    css: false
-    js: false

@@ -42,7 +42,7 @@
   title="{{ site.title }}"
   href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-{% stylesheet main.css %}
+<link rel="stylesheet" href="{{ site.asset_host }}/assets/css/main.css">
 
 {% if site.environment == "production" %}
 <script>
