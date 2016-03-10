@@ -45,7 +45,7 @@
   }
 
   aside, article {
-    max-width: $screen-sm;
+    max-width: $screen-sm + 50px;
   }
 
   aside {
@@ -57,11 +57,13 @@
 
   article {
     h2 {
-      font-size: 2.5em;
+      font-size: 2em;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed $gray;
     }
 
     p {
-      font-size: 1.15em;
+      font-size: 1em;
       line-height: 1.5em;
     }
 
@@ -84,6 +86,10 @@
       list-style-position: outside;
     }
 
+    figure {
+      margin: 0px;
+    }
+
     pre {
       padding: 10px;
       font-size: .75em;
@@ -91,14 +97,14 @@
       border: 1px solid #ddd;
 
       @include screen-md {
-        font-size: .9em;
+        font-size: .8em;
       }
     }
 
-    ul, ol, a, blockquote {
+    p, ul, ol, a, blockquote {
       code {
         background-color: #f9f9f9;
-        border: 1px solid #ddd;
+        border: 1px solid lighten($highlight-blog, 30%);
         padding: 1px 4px;
         font-size: .9em;
       }
@@ -109,7 +115,10 @@
 #blog-list {
   margin-top: 50px;
 
-  h2 { font-size: 2em; }
+  h2 {
+    margin-top: 0px;
+    font-size: 2em;
+  }
 
   a.author {
     font-weight: bold;
@@ -142,6 +151,19 @@
   p.excerpt {
     line-height: 1.5em;
     font-size: 1.15em;
+  }
+
+  .blog-post {
+    $size: 40px;
+    padding-bottom: $size;
+    margin-bottom: $size;
+    border-bottom: 1px dashed $gray-light;
+
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
   }
 }
 
