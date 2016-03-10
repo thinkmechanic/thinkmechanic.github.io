@@ -17,7 +17,7 @@ layout: default
               <a class="author" href="{{ author.github }}" target="_blank">{{ author.name | strip }}</a>
             {% endif %}
             <time datetime="{{ post.date | date_to_rfc822 }}">
-              {{ post.date | pretty }}
+              {{ post.date | date: "%b. %d, %Y" }}
             </time>
           </p>
 
